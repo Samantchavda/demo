@@ -1,12 +1,9 @@
-/* eslint-disable */
 <template>
   <nav class="sidebar-nav">
-    <ul class="nav">
-      <template v-for="item in navItems">
-        <li>
-          <a :href="item.url">{{item.name}}</a>
-        </li>
-      </template>
+  <ul class="nav">
+    <li  v-for="(item, index) in navItems" :key="index">
+        <a :href="item.url">{{item.name}}</a>
+      </li>    
     </ul>  
   </nav>
 </template>
