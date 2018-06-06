@@ -18,6 +18,10 @@ export default {
             url: '/binding/Databindings'
         },
         {
+            name: 'CSS Bindings',
+            url: '/binding/Cssbindings',
+        },
+        {
             name: 'Other Bindings',
             url: '/binding/Otherbindings',
         },
@@ -41,6 +45,18 @@ export default {
                 {
                     name: 'Checkbox Binding',
                     url: '/Controll/Checkboxtag'
+                },
+                {
+                    name: 'Radio Binding',
+                    url: '/Controll/Radiotag'
+                },
+                {
+                    name: 'Select Binding',
+                    url: '/Controll/Selecttag'
+                },
+                {
+                    name: 'Form',
+                    url: '/Controll/Form'
                 }
             ]
         },

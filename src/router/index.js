@@ -9,8 +9,13 @@ import DefaultContainer from '@/container/DefaultContainer'
 import Dashboard from '@/views/Dashboard'
 import Otherbindings from '@/views/Binding/Otherbindings'
 import Databindings from '@/views/Binding/Databindings'
+import Cssbindings from '@/views/Binding/Cssbindings'
 import Inputtag from '@/views/Controll/Inputtag'
 import Checkboxtag from '@/views/Controll/Checkboxtag'
+import Radiotag from '@/views/Controll/Radiotag'
+import Selecttag from '@/views/Controll/Selecttag'
+import Form from '@/views/Controll/Form'
+
 
 //Pages
 import Page404 from '@/views/Pages/Page404'
@@ -51,6 +56,11 @@ export default new Router({
               path: 'Databindings',
               name: 'Databindings',
               component: Databindings
+            },
+            {
+              path: 'Cssbindings',
+              name: 'Cssbindings',
+              component: Cssbindings
             }
           ]
         },
@@ -71,6 +81,21 @@ export default new Router({
               path: 'checkboxtag',
               name: 'Checkboxtag',
               component: Checkboxtag
+            },
+            {
+              path: 'Radiotag',
+              name: 'Radiotag',
+              component: Radiotag
+            },
+            {
+              path: 'Selecttag',
+              name: 'Selecttag',
+              component: Selecttag
+            },
+            {
+              path: 'Form',
+              name: 'Form',
+              component: Form
             }
           ]
         }
