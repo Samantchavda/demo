@@ -1,26 +1,51 @@
 <template>
   <div class="app">
-    <SidebarNav :navItems="nav"></SidebarNav>
-     <main class="main">
+    <AppHeader fixed>
+      <SidebarToggler class="d-lg-none" display="md" mobile />
+      <b-link class="navbar-brand" to="#">
+        <img class="navbar-brand-full" src="../assets/logo.png" width="89" height="25" alt="Logo">
+        <img class="navbar-brand-minimized" src="../assets/logo.png" width="30" height="30" alt="Logo">
+      </b-link>
+      <SidebarToggler class="d-md-down-none" display="lg" />
+    </AppHeader>
+    <div class="app-body">
+      <sidebar fixed>
+        <SidebarNav :navItems="nav"></SidebarNav>
+        <SidebarMinimizer/>
+      </sidebar>
+      <main class="main">
+        <breadcrumb :list="list"/>
         <div class="container-fluid">
           <router-view></router-view>
         </div>
       </main>
+    </div>
+    <AppFooter>
+      <!--footer-->
+    </AppFooter>
   </div>
 </template>
 
 <script>
 import nav from '../_nav'
-import SidebarNav from '../components/SidebarNav.vue'
-//import { Header as AppHeader, HeaderDropdown as AppHeaderDropdown, SidebarToggler, Sidebar as AppSidebar, SidebarFooter, SidebarForm, SidebarHeader, SidebarMinimizer, SidebarNav, Aside as AppAside, AsideToggler, Footer as TheFooter, Breadcrumb } from '@coreui/vue'
-// import { Header as AppHeader, HeaderDropdown as AppHeaderDropdown, SidebarToggler, Sidebar as AppSidebar, SidebarFooter, SidebarForm, SidebarHeader, SidebarMinimizer, SidebarNav, Aside as AppAside, AsideToggler, Breadcrumb } from '../components/'
-// import { Footer as TheFooter } from '@coreui/vue'
-//import DafaultAside from './DafaultAside'
+import AppHeader from '../components/Header/Header.vue'
+import SidebarToggler from '../components/sidebar/SidebarToggler.vue'
+import sidebar from '../components/sidebar/Sidebar.vue'
+import SidebarMinimizer from '../components/sidebar/SidebarMinimizer.vue'
+import SidebarNav from '../components/sidebar/SidebarNav.vue'
+import AppFooter from '../components/Footer/Footer.vue'
+import  Breadcrumb from '../components/Breadcrumb/Breadcrumb.vue'
 
 export default {
   name: 'full',
   components: {
-    SidebarNav
+    AppHeader,
+    sidebar,
+    AppFooter,
+    Breadcrumb,
+    SidebarToggler,
+    SidebarNav,
+    SidebarMinimizer
   },
   data () {
     return {

@@ -1,0 +1,29 @@
+
+
+// Override Boostrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap source files
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Import core styles
+@import "variables";
+@import "mixins";
+
+// Components
+@import "breadcrumb-menu";
+@import "breadcrumb";
+@import "footer";
+@import "header";
+@import "nav";
+@import "sidebar";
+
+// Layout Options
+@import "layout";
+
+// Custom Properties support for Internet Explorer
+@import "ie-custom-properties";
+
+// other
+@import "Other";
+
