@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+
+// Notification
+import Notifications from 'vue-notification'
+
+//velocity-animate
+import velocity      from 'velocity-animate'
+
 
 // Containers
 import DefaultContainer from '@/container/DefaultContainer'
@@ -15,6 +21,8 @@ import Checkboxtag from '@/views/Controll/Checkboxtag'
 import Radiotag from '@/views/Controll/Radiotag'
 import Selecttag from '@/views/Controll/Selecttag'
 import Form from '@/views/Controll/Form'
+import Alerts from '@/views/Notifications/Alerts'
+import Modals from '@/views/Notifications/Modals'
 
 
 //Pages
@@ -22,6 +30,7 @@ import Page404 from '@/views/Pages/Page404'
 
 
 Vue.use(Router)
+Vue.use(Notifications, {velocity})
 
 export default new Router({
   mode: 'hash', // Demo is living in GitHub.io, so required!
@@ -96,6 +105,26 @@ export default new Router({
               path: 'Form',
               name: 'Form',
               component: Form
+            }
+          ]
+        },
+        {
+          path: 'Notifications',
+          redirect: '/Notifications/Alerts',
+          name: 'Notifications',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'Alerts',
+              name: 'Alerts',
+              component: Alerts
+            },
+            {
+              path: 'Modals',
+              name: 'Modals',
+              component: Modals
             }
           ]
         }

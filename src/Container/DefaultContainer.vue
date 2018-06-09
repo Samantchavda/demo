@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <AppNotification/>
     <AppHeader fixed>
       <SidebarToggler class="d-lg-none" display="md" mobile />
       <b-link class="navbar-brand" to="#">
@@ -34,7 +35,9 @@ import sidebar from '../components/sidebar/Sidebar.vue'
 import SidebarMinimizer from '../components/sidebar/SidebarMinimizer.vue'
 import SidebarNav from '../components/sidebar/SidebarNav.vue'
 import AppFooter from '../components/Footer/Footer.vue'
-import  Breadcrumb from '../components/Breadcrumb/Breadcrumb.vue'
+import Breadcrumb from '../components/Breadcrumb/Breadcrumb.vue'
+import AppNotification from '../components/Notifications/Notifications.vue'
+
 
 export default {
   name: 'full',
@@ -45,7 +48,8 @@ export default {
     Breadcrumb,
     SidebarToggler,
     SidebarNav,
-    SidebarMinimizer
+    SidebarMinimizer,
+    AppNotification
   },
   data () {
     return {

@@ -29,7 +29,7 @@
       </div>
       <div class="demo">
         Result: <br/>
-        <select v-model="selected" multiple>
+        <select v-model="mselected" multiple>
         <option>A</option>
         <option>B</option>
         <option>C</option>
@@ -58,7 +58,7 @@ export default {
         </select>
         <span>Selected: {{ selected }}</span>`,
       selected: '',
-      Mhtml:`<select v-model="selected" multiple>
+      Mhtml:`<select v-model="mselected" multiple>
         <option>A</option>
         <option>B</option>
         <option>C</option>

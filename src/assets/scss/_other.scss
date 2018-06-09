@@ -17,3 +17,12 @@
     display: none;
 }
 
+.demoexample .row label {
+    padding-right: 10px;
+}
+.demoexample .row input[type="radio"] ,
+.demoexample .row input[type="checkbox"]
+{
+    vertical-align: middle;
+    margin-left: 2px;
+}

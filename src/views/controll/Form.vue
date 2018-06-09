@@ -16,10 +16,24 @@
                     <input type="radio" :value="item" v-model="fgender">
                     <span>{{item }}</span>
                 </div>
-                <!-- <input type="radio" value="Male" v-model="fgender">
-                <span>Male</span>
-                <input type="radio" value="Female" v-model="fgender">
-                <span>Female</span> -->
+            </div>
+            <div class="row">
+                <label>JS Framwork : </label>
+                <div  v-for="(item, index) in flanguagelist" :key="index">
+                    <input type="checkbox" :value="item" v-model="flanguage">
+                    <span>{{ item }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <label>Environment : </label>
+                <select v-model="fenviroment">
+                    <option  v-for="(item, index) in fenviromentlist" :key="index">
+                        {{ item }}
+                    </option>
+                </select>
+            </div>
+            <div class="row">
+                <button v-on:click="submit">Submit</button>
             </div>
         </div>
     </div>
@@ -32,6 +46,12 @@
             </div>
             <div class="row">
                 <label>Gender :  {{ fgender }}</label>
+            </div>
+            <div class="row">
+                <label>JS Framwork :  {{ flanguage }}</label>
+            </div>
+            <div class="row">
+                <label>Environment :  {{ fenviroment }}</label>
             </div>
         </div>
     </div>
@@ -47,8 +67,21 @@ export default {
       msg: 'Form Demo',
       fname:'',
       fgender:'',
-      fgenderlist:['Male','Female']
+      fgenderlist:['Male','Female'],
+      flanguagelist:['javaScript','Node','Anglar' ,'Vue'],
+      flanguage :[],
+      fenviromentlist:['Prod','Stage','Dev'],
+      fenviroment :''
     }
+  },
+  methods:{
+      submit : function(){
+          var message = "First Name :  " + this.fname + '\n';
+          message += "Gender :  " + this.fgender + '\n';
+          message += "JS Framwork :  " + this.flanguage.toString() + '\n';
+          message += "Environment :  " + this.fenviroment ;
+          alert(message);
+      }
   }
 }
 </script>
